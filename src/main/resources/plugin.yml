@@ -1,0 +1,10 @@
+main: io.github.asdqwenm123.SoraInfo
+name: SoraInfo
+version: 0.0.1
+api-version: 1.19
+author: sorayumi109
+description: For changing server's information
+depend: [Citizens, DecentHolograms]
+libraries:
+  - io.github.monun:kommand-core:3.1.7
+  - net.dv8tion:JDA:5.0.1
