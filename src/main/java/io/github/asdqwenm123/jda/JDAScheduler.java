@@ -3,12 +3,11 @@ package io.github.asdqwenm123.jda;
 import io.github.asdqwenm123.SoraInfo;
 import io.github.asdqwenm123.jda.listener.MessageReactionAddListener;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
 import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.requests.GatewayIntent;
+import net.dv8tion.jda.api.utils.MemberCachePolicy;
 
 import java.awt.*;
 
@@ -27,6 +26,9 @@ public class JDAScheduler {
                                 GatewayIntent.MESSAGE_CONTENT,
                                 GatewayIntent.GUILD_MEMBERS,
                                 GatewayIntent.GUILD_MESSAGES
+                        )
+                        .setMemberCachePolicy(
+                                MemberCachePolicy.ALL
                         )
                         .addEventListeners(new MessageReactionAddListener())
                         .build().awaitReady();
